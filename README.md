@@ -14,6 +14,7 @@ A RESTful API for managing users built with Spring Boot, Spring Data JPA, and Po
 - Java 17 or higher
 - Maven
 - PostgreSQL database
+- Docker (optional)
 
 ## Database Configuration
 
@@ -59,11 +60,30 @@ src/main/java/com/example/demo/
 
 ## Running the Application
 
+### Using Maven
+
 1. Clone the repository
 2. Configure your database connection in `application.properties`
 3. Run the application:
    ```bash
    mvn spring-boot:run
+   ```
+
+### Using Docker
+
+1. Build the application:
+   ```bash
+   mvn clean package
+   ```
+
+2. Build the Docker image:
+   ```bash
+   docker build -t spring-users .
+   ```
+
+3. Run the Docker container:
+   ```bash
+   docker run -p 8080:8080 spring-users
    ```
 
 ## Building the Application
@@ -79,6 +99,7 @@ mvn clean install
 - PostgreSQL
 - Maven
 - Java 17
+- Docker
 
 ## License
 
