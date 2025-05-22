@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 
 # Copy the JAR file from target directory
-COPY target/*.jar app.jar
+COPY target/demo-1.jar app.jar
 
 # Expose the port the app runs on
 EXPOSE 8080
